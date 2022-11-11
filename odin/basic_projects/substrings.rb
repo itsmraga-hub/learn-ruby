@@ -1,11 +1,13 @@
 def substrings(str, dictionary)
-  substring_hash = {}
+  my_hash = {}
   new_arr = dictionary.select { |word| str.include?(word) }
-  new_arr.each do |word|
-    substring_hash[word] = str.scan(word).length
+  new_arr.each do |key|
+    my_hash[key] = str.scan(key).length
   end
-  substring_hash
+  my_hash
 end
+
+# "aadser".scan('a') => ['a', 'a'].length = 2
 
 
 
